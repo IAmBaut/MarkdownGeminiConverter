@@ -29,9 +29,9 @@ which will display the help window:
        -g GEMINI    Specify a gemini file or folder.
        -o OUTPUT    (Optional) Specify a output file or folder.
 
-You are limited to one mode only (either markdown with `-m` or gemini with `-g`). The path of the file or folder is expected as an argument. If you choose a file, the file will be converted. If you choose a folder, *all* files in that folder and its subfolders that are valid `.md` or `.gmni` files will be converted. This may replace your original code, so be careful.
+You are limited to one mode only (either markdown with `-m` or gemini with `-g`). The path of the file or folder is expected as an argument. If you choose a file, the file will be converted. If you choose a folder, *all* files in that folder and its subfolders that are valid `.md` or `.gmni` files will be converted. This will replace your original file(s), so be careful.
 
-If you specify a output with `-o path` the input will not be overwritten, instead a new file or folder will be created at path. Please note that this file or folder should not already exist.
+If you specify an output with `-o path` the input will not be overwritten, instead a new file or folder will be created at path. Please note that this file or folder should not already exist.
 
 ## Examples
 
@@ -53,7 +53,7 @@ Gemini has only 6 line types, 3 of which are essential and 3 of which are option
 
 * Text lines (which work a little like paragraphs in Markdown)
 * => Link lines (MUST be its own line. Inline links are not supported.)
-* ```Toggle lines (toggles between "raw" and "normal" mode)
+* \`\`\`Toggle lines (toggles between "raw" and "normal" mode)
 * (optional) # Heading lines
 * (optional) * Unordered list lines
 * (optional) &gt; Quote lines
@@ -76,4 +76,4 @@ All gemini features have an equivalent in markdown, so no information is lost wh
 
 ## Disclaimer
 
-This code was written only to help me convert files from `.md` to `.gmni` personally. It's neither ellegant, nor efficient, nor does it support all features of markdown. If things go wrong, or there's bugs, or anything else happens as a result of this code, I'm neither liable, nor responsible. You explicitly agree to this by downloading and using the code. I appreciate bugreports, reporting of issues and improvements, but I can't guarantee I will fix them in a timely manner, if at all. 
+This code was written only to help me convert files from `.md` to `.gmni` personally. It's neither ellegant, nor efficient, nor does it support all features of markdown. If things go wrong, or there's bugs, or anything else happens as a result of this code, I'm neither liable, nor responsible. You explicitly agree to this by downloading and using the code. I appreciate bugreports, reporting of issues and improvements, but I can't guarantee I will fix them in a timely manner, if at all.
