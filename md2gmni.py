@@ -322,7 +322,7 @@ if __name__ == '__main__':
                         with open(args.output[0],"w") as outf:
                             outf.write(md2gmni(inf.read()))
                     else:
-                        with open("output.md","w") as outf:
+                        with open("output.gmni","w") as outf:
                             outf.write(md2gmni(inf.read()))
             else:
                 try:
@@ -338,6 +338,7 @@ if __name__ == '__main__':
                                 infile.seek(0)
                                 infile.write(md2gmni(inf))
                                 infile.truncate()
+                            os.rename(i,(i[:-3]+".gmni"))
                 except FileExistsError:
                     print("Error. The Folder already Exists. Choose another folder or delete the old folder.")
         elif args.gemini:
@@ -347,7 +348,7 @@ if __name__ == '__main__':
                         with open(args.output[0],"w") as outf:
                             outf.write(gmni2md(inf.read()))
                     else:
-                        with open("output.gmni","w") as outf:
+                        with open("output.md","w") as outf:
                             outf.write(gmni2md(inf.read()))
             else:
                 try:
@@ -363,5 +364,6 @@ if __name__ == '__main__':
                                 infile.seek(0)
                                 infile.write(gmni2md(inf))
                                 infile.truncate()
+                            os.rename(i,(i[:-5]+".md"))
                 except FileExistsError:
                     print("Error. The Folder already Exists. Choose another folder or delete the old folder.")
